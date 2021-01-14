@@ -18,9 +18,9 @@
       <header class="header">
         <img src="img/logo.png" alt="logo" class="logo" />
         <form action="#" class="search">
-          <input type="text" class="search__input" />
+          <input type="text" class="search__input" placeholder="Search"/>
           <button class="search__btn">
-            <svg>
+            <svg class="search__icon">
               <use xlink:href="img/sprite.svg#icon-magnifying-glass"></use>
             </svg>
           </button>
@@ -28,7 +28,7 @@
         <nav class="user-nav">
           <div class="user-nav__icon-box">
             <svg class="user-nav__icon">
-              <use xlink:href="img/sprite.svg#bookmark"></use>
+              <use xlink:href="img/sprite.svg#icon-bookmark"></use>
             </svg>
             <span class="user-nav__notification">7</span>
           </div>
@@ -36,7 +36,7 @@
             <svg class="user-nav__icon">
               <use xlink:href="img/sprite.svg#icon-chat"></use>
             </svg>
-            <span class="user-nav__notification">7</span>
+            <span class="user-nav__notification">13</span>
           </div>
           <div class="user-nav__user">
             <img src="img/user-1.jpg" alt="" class="user-nav__user-photo" />
@@ -44,9 +44,51 @@
           </div>
         </nav>
       </header>
-      <div class="content"></div>
-
-      <div class="footer"></div>
+      <div class="content">
+        <aside class="sidebar">
+          <nav class="side-nav">
+            <ul class="side-nav__list">
+              <li class="side-nav__item">
+                <a href="" class="side-nav__link">
+                  <svg class="nav-nav__icon">
+                    <use xlink:href="img/sprite.svg#icon-home"></use>
+                  </svg>
+                  <span>HOTEL</span>
+                </a>
+              </li>
+              <li class="side-nav__item">
+                <a href="" class="side-nav__link">
+                  <svg class="nav-nav__icon">
+                    <use xlink:href="img/sprite.svg#icon-aircraft-take-off"></use>
+                  </svg>
+                  <span>FLIGHT</span>
+                </a>
+              </li>
+              <li class="side-nav__item">
+                <a href="" class="side-nav__link">
+                  <svg class="nav-nav__icon">
+                    <use xlink:href="img/sprite.svg#icon-key"></use>
+                  </svg>
+                  <span>CAR RENTAL</span>
+                </a>
+              </li>
+              <li class="side-nav__item">
+                <a href="" class="side-nav__link">
+                  <svg class="nav-nav__icon">
+                    <use xlink:href="img/sprite.svg#icon-map"></use>
+                  </svg>
+                  <span>TOUR</span>
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </aside>
+        <main class="main-view">
+          <div class="gallery"></div>
+          <div class="overview"></div>
+          <div class="description"></div>
+        </main>
+      </div>
     </div>
   </body>
 </html>

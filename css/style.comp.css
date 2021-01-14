@@ -48,3 +48,20 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   min-height: 100vh; }
+
+.container {
+  max-width: 120 rem;
+  margin: 8rem auto;
+  background-color: var(--color-grey-light-1);
+  box-shadow: var(--shadow-dark);
+  min-height: 50rem; }
+
+.content {
+  display: flex; }
+
+.sidebar {
+  flex: 0 0 20%;
+  background-color: var(--color-grey-dark-1); }
+
+.main-view {
+  flex: 1; }
