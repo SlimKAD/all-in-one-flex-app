@@ -20,7 +20,6 @@
 
 .content {
   display: flex;
-  height: 80vh;
 }
 .sidebar {
   flex: 0 0 20%;
@@ -29,4 +28,27 @@
 
 .main-view {
   flex: 1;
+}
+
+.details {
+  display: flex;
+  font-size: 1.4rem;
+  padding: 4.5rem;
+  background-color: var(--color-grey-light-1);
+  border-bottom: var(--line);
+}
+
+.description {
+  flex: 0 0 65%;
+  background-color: #fff;
+  padding: 3rem;
+  box-shadow: var(--shadow-light);
+  margin-right: 4.5rem;
+}
+
+.user-reviews {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
