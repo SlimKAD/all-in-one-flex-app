@@ -5,6 +5,11 @@
   background-color: var(--color-grey-light-1);
   box-shadow: var(--shadow-dark);
   min-height: 50rem;
+  @include respond(tab-land) {
+    margin: 0;
+    max-width: 100%;
+    width: 100%;
+  }
 }
 
 .header {
@@ -16,10 +21,17 @@
   font-size: 1.6rem;
   justify-content: space-between;
   align-items: center;
+  @include respond(phone) {
+    flex-wrap: wrap;
+    height: 11rem;
+  }
 }
 
 .content {
   display: flex;
+  @include respond(tab-land) {
+    flex-direction: column;
+  }
 }
 .sidebar {
   flex: 0 0 20%;
@@ -36,6 +48,12 @@
   padding: 4.5rem;
   background-color: var(--color-grey-light-1);
   border-bottom: var(--line);
+  @include respond(tab-land) {
+    padding: 2rem;
+  }
+  @include respond(phone) {
+    flex-direction: column;
+  }
 }
 
 .description {
@@ -44,6 +62,14 @@
   padding: 3rem;
   box-shadow: var(--shadow-light);
   margin-right: 4.5rem;
+  @include respond(tab-land) {
+    padding: 2rem;
+    margin-right: 2rem;
+  }
+  @include respond(phone) {
+    margin-right: 0;
+    margin-bottom: 2rem;
+  }
 }
 
 .user-reviews {

@@ -7,6 +7,11 @@
   display: flex;
   flex: 0 0 40%;
   justify-content: center;
+  @include respond(phone) {
+    order: 1;
+    flex: 0 0 100%;
+    background-color: var(--color-grey-light-2);
+  }
   &__input {
     font-size: inherit;
     font-family: inherit;
@@ -108,10 +113,21 @@
     list-style: none;
     margin-top: 3rem;
     font-size: 1.6rem;
+    @include respond(tab-land) {
+      display: flex;
+      margin: 0;
+    }
+    @include respond(phone) {
+      font-size: 1.4rem;
+    }
   }
 
   &__item {
     position: relative;
+    @include respond(tab-land) {
+      margin: 0;
+      flex: 1;
+    }
   }
 
   &__item:not(:last-child) {
@@ -151,6 +167,14 @@
     align-items: center;
     z-index: 100;
     position: relative;
+    @include respond(tab-land) {
+      justify-content: center;
+      padding: 2rem;
+    }
+    @include respond(phone) {
+      flex-direction: column;
+      padding: 1.5rem 0.5rem;
+    }
   }
 
   &__icon {
@@ -158,6 +182,12 @@
     width: 1.75rem;
     margin-right: 2rem;
     fill: currentColor;
+    @include respond(phone) {
+      margin-right: 0;
+      margin-bottom: 0.7rem;
+      height: 1.5rem;
+      width: 1.5rem;
+    }
   }
 }
 
@@ -165,6 +195,9 @@
   text-align: center;
   font-size: 1.4rem;
   padding: 2.5rem;
+  @include respond(tab-land) {
+    display: none;
+  }
 }
 
 .gallery {
@@ -312,6 +345,7 @@
     margin-right: auto;
   }
   &__friends {
+    display: flex;
   }
   &__photo {
     box-sizing: content-box;
