@@ -252,9 +252,9 @@
       margin-left: 8px;
     }
   }
-  & span{
+  & span {
     margin-left: 3px;
-    transition: margin-left .2s;
+    transition: margin-left 0.2s;
   }
 }
 
@@ -338,8 +338,8 @@
     font-family: sans-serif;
     color: var(--color-grey-light-2);
     top: 7rem;
-    left: -1rem;  
-    z-index: 1;  
+    left: -1rem;
+    z-index: 1;
   }
   &__text {
     font-size: 1.4rem;
@@ -356,10 +356,10 @@
     width: 4.5rem;
     margin-right: 1.5rem;
   }
-  
+
   &__user-name {
     font-weight: 700;
-    margin-bottom: .5rem;
+    margin-bottom: 0.5rem;
   }
   &__user-date {
     font-size: 1.1rem;
@@ -368,6 +368,70 @@
     font-size: 2.2rem;
     color: var(--color-primary);
     font-weight: 300;
-    margin-left: .75rem;
+    margin-left: 0.75rem;
+  }
+}
+
+.cta {
+  background-color: #fff;
+  text-align: center;
+  padding: 4rem 0;
+  &__text {
+    font-size: 2rem;
+    font-weight: 300;
+    margin-bottom: 2rem;
+  }
+}
+
+.btn {
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  font-weight: 300;
+  color: #fff;
+  border: none;
+  border-radius: 100px;
+  background-image: linear-gradient(
+    to right,
+    var(--color-primary-light),
+    var(--color-primary-dark)
+  );
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  &:hover {
+    background-image: linear-gradient(
+      to left,
+      var(--color-primary-light),
+      var(--color-primary-dark)
+    );
+  }
+  &:focus {
+    animation: pulsate 1s infinite;
+    outline: none;
+  }
+
+  & > * {
+    height: 100%;
+    width: 100%;
+    display: inline-block;
+    transition: all 0.2s;
+  }
+
+  &__visible {
+    padding: 2rem 7.5rem;
+  }
+  &__invisible {
+    position: absolute;
+    padding: 2rem;
+    top: -100%;
+    left: 0;
+  }
+
+  &:hover &__visible {
+    transform: translateY(100%);
+  }
+
+  &:hover &__invisible {
+    top: 0;
   }
 }
